@@ -5,6 +5,8 @@ WebInspector.NodeInspectorOverrides = function() {
   this._overrideMainScriptType();
   this._overrideUIStrings();
 
+  this._setWindowTitle();
+
   this._openMainScriptOnStartup();
 };
 
@@ -32,6 +34,9 @@ WebInspector.NodeInspectorOverrides.prototype = {
       args[0] = overridenStrings[string] || string;
       return this.orig_UIString.apply(this, args);
     };
+  },
+  _setWindowTitle: function() {
+    this._overridenStrings['Developer Tools - %s'] = 'Node Inspector - %s';
   },
   _openMainScriptOnStartup: function() {
     WebInspector.targetManager.addModelListener(
