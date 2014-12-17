@@ -1,10 +1,11 @@
 /*jshint browser:true, nonew:false*/
-/*global WebInspector, Runtime*/
+/*global WebInspector, Runtime, InspectorFrontendHost*/
 WebInspector.NodeInspectorOverrides = function() {
   this._overridenStrings = {};
   this._overrideMainScriptType();
   this._overrideUIStrings();
 
+  this._setWorkerTitle();
   this._setWindowTitle();
 
   this._openMainScriptOnStartup();
@@ -26,6 +27,7 @@ WebInspector.NodeInspectorOverrides.prototype = {
         return this.orig_createResourceFromFramePayload(frame, url, type, mimeType);
       };
   },
+
   _overrideUIStrings: function() {
     var overridenStrings = this._overridenStrings;
     WebInspector.orig_UIString = WebInspector.UIString;
@@ -35,9 +37,22 @@ WebInspector.NodeInspectorOverrides.prototype = {
       return this.orig_UIString.apply(this, args);
     };
   },
+
+  _setWorkerTitle: function() {
+    // Front-end uses `eval location.href` to get url of inspected page
+    // This does not work in node.js from obvious reasons, and cause
+    // a 'null' message to be printed in front-end console.
+    // Since Preferences.applicationTitle does not include inspected url,
+    // we can return arbitrary string as inspected URL.
+    WebInspector.WorkerTargetManager.prototype._calculateWorkerInspectorTitle = function() {
+      InspectorFrontendHost.inspectedURLChanged('');
+    };
+  },
+
   _setWindowTitle: function() {
     this._overridenStrings['Developer Tools - %s'] = 'Node Inspector - %s';
   },
+
   _openMainScriptOnStartup: function() {
     WebInspector.targetManager.addModelListener(
       WebInspector.ResourceTreeModel,
