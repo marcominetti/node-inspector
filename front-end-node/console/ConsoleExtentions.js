@@ -11,6 +11,7 @@ WebInspector.ConsoleExtensions = function() {
   this._extendConsoleDispatcher();
   this._overrideConsoleViewFilterAdd();
   this._overrideHandleContextMenuEvent();
+  this._overrideFormattedMessage();
 };
 
 WebInspector.ConsoleExtensions.prototype = {
@@ -91,6 +92,17 @@ WebInspector.ConsoleExtensions.prototype = {
 
         contextMenu.show();
     }
+  },  
+  _overrideFormattedMessage: function() {
+    WebInspector.ConsoleViewMessage.prototype.formattedMessage = function() {
+        if (!this._formattedMessage) {
+            this._formatMessage();
+            WebInspector.ConsoleViewEventDispatcher.dispatchEventToListeners(
+              WebInspector.ConsoleViewEventDispatcher.Events.MessageFormatted,
+              this._formattedMessage);
+        }
+        return this._formattedMessage;
+    };
   }
 };
 
