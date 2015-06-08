@@ -1,9 +1,8 @@
 {
-  "name": "node-inspector",
-  "version": "0.10.1",
-  "description": "Web Inspector based nodeJS debugger",
-  "homepage": "http://github.com/node-inspector/node-inspector",
-  "author": "Danny Coates <dannycoates@gmail.com>",
+  "name": "ljve-inspector",
+  "version": "0.10.1-9",
+  "description": "Web Inspector based nodeJS debugger with extra/backported features",
+  "homepage": "http://github.com/marcominetti/node-inspector",
   "keywords": [
     "debug",
     "debugger",
@@ -12,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/node-inspector/node-inspector.git"
+    "url": "http://github.com/marcominetti/node-inspector.git"
   },
   "engines": {
     "node": ">=0.8.0"

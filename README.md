@@ -1,17 +1,14 @@
-# Node Inspector
+# Ljve Inspector
 
-[![Build Status](https://travis-ci.org/node-inspector/node-inspector.png?branch=master)](https://travis-ci.org/node-inspector/node-inspector)
-[![NPM version](https://badge.fury.io/js/node-inspector.png)](http://badge.fury.io/js/node-inspector)
-[![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=195817)](https://www.bountysource.com/trackers/195817-node-inspector?utm_source=195817&utm_medium=shield&utm_campaign=TRACKER_BADGE)
-
-[![Join the chat at https://gitter.im/node-inspector/node-inspector](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/node-inspector/node-inspector?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Forked from [node-inspector/node-inspector](https://github.com/node-inspector/node-inspector/).
 
 ## Overview
 
-Node Inspector is a debugger interface for Node.js applications that uses the
-Blink Developer Tools (formerly WebKit Web Inspector).
+Ljve Inspector is a debugger interface for Node.js applications that uses the
+Blink Developer Tools (formerly WebKit Web Inspector). It embeds extra features and
+backported patches from node-inspector master branches and pull requests.
 
-The project maintenance and support is sponsored by
+The original node-inspector project maintenance and support is sponsored by
 [StrongLoop](http://strongloop.com).
 
 ### Table of Content
@@ -268,7 +265,9 @@ an undocumented API function `process._debugProcess(pid)`:
 
 #### 3. Load the debugger UI
 
-Open http://127.0.0.1:8080/?port=5858 in the Chrome browser.
+Open http://127.0.0.1:8080/?ws=127.0.0.1:8080&port=5858 in the Chrome browser.
+
+If you want to enable support for ECMAScript 6/7 through babeljs in console, open http://127.0.0.1:8080/?ws=127.0.0.1:8080&port=5858&babel=7 in the Chrome browser.
 
 ## Configuration
 
