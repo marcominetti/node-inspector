@@ -8,6 +8,8 @@
     { "name": "node/main", "type": "autostart" },
     { "name": "node/ui", "type": "autostart" },
     { "name": "node/components", "type": "autostart" },
+    { "name": "node/esnext_cm", "type": "autostart" },
+    { "name": "node/esnext_console", "type": "autostart" },
     { "name": "platform", "type": "autostart" },
     { "name": "main", "type": "autostart" },
     { "name": "components", "type": "autostart" },

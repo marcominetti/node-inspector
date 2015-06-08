@@ -41,7 +41,9 @@
     "mocha": "^1.21",
     "chai": "^1.9",
     "jshint": "^2.4.4",
-    "fs-extra": "~0.8.1"
+    "fs-extra": "~0.8.1",
+    "acorn-babel": "^0.11.1-38",
+    "babel": "^5.5.5"
   },
   "preferGlobal": true,
   "scripts": {
