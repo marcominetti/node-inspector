@@ -4,8 +4,12 @@ WebInspector.SourcesOverrides = function() {
   this._chromeSpecificsAreHidden = false;
   this._hideChromeSpecifics();
   this._overrideWatchExpression();
+<<<<<<< HEAD
   this._hideContentsScript();
   this._disableAddFolderItem();
+=======
+  this._overrideShortcutsRegistering();
+>>>>>>> 4df7074... front-end: Fix double sending of `togglePause`
 };
 
 WebInspector.SourcesOverrides.prototype = {
@@ -43,6 +47,7 @@ WebInspector.SourcesOverrides.prototype = {
     // DevTools' value "\n" breaks the debugger protocol.
     WebInspector.WatchExpressionsSection.NewWatchExpression = ' ';
   },
+<<<<<<< HEAD
   
   _hideContentsScript: function(){
     if (WebInspector.SourcesPanel._instanceObject) {
@@ -60,6 +65,23 @@ WebInspector.SourcesOverrides.prototype = {
   
   _disableAddFolderItem: function(){
     WebInspector.NavigatorView.prototype._appendAddFolderItem = function(){};
+=======
+
+  _overrideShortcutsRegistering: function() {
+    // TODO(3y3): Check this before next front-end update.
+    // If it wasn't fixed we need to deprecate it anyway and search other way to fix.
+    setTimeout(function() {
+      WebInspector.SourcesPanel.prototype._createButtonAndRegisterShortcutsForAction =
+        function(buttonId, buttonTitle, actionId) {
+          function handler() {
+            WebInspector.actionRegistry.execute(actionId);
+            return true;
+          }
+          var shortcuts = WebInspector.shortcutRegistry.shortcutDescriptorsForAction(actionId);
+          return this._createButtonAndRegisterShortcuts(buttonId, buttonTitle, handler, shortcuts);
+        };
+    });
+>>>>>>> 4df7074... front-end: Fix double sending of `togglePause`
   }
 };
 
