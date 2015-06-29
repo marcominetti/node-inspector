@@ -1,3 +1,66 @@
+<<<<<<< HEAD
+=======
+## 2015-06-29, Version 0.11.0
+
+ * Update README.md (3y3)
+
+ * front-end: Fix double sending of `togglePause` (3y3)
+
+ * Fix `redirectToRoot` context (3y3)
+
+ * Network: added new tests (3y3)
+
+ * Network: fixed front-end (3y3)
+
+ * Added Network tab (3y3)
+
+ * Properly redirect to root (3y3)
+
+ * Added /json/version http endpoint (Kenneth Auchenberg)
+
+ * Added /json http endpoint (Kenneth Auchenberg)
+
+ * Ignore errors during debugger closing. Fix tests. (3y3)
+
+ * Fix inline sourcemaps path in node 0.10.x (Andres Suarez)
+
+ * Send disconnect request on connection closing (3y3)
+
+
+## 2015-06-15, Version 0.10.2
+
+ * Fix test for iojs (3y3)
+
+ * Avoid inline sourcemaps to be re-fetched from backend. (Marco Minetti)
+
+ * Improve inline sourcemaps (3y3)
+
+ * Check if source stored in app on source request (3y3)
+
+ * Move `getScriptSourceById` to ScriptManager (3y3)
+
+ * Console: fix max string length (3y3)
+
+ * Console: fix caller script url (3y3)
+
+ * Console: fix currentFrame searching (3y3)
+
+ * Console: added special wrapper for assert func (3y3)
+
+ * Fix index tests (3y3)
+
+ * Fix url backward compatibility (3y3)
+
+ * Fixed #667 (3y3)
+
+ * Fix config web-host deprecation checker (3y3)
+
+ * Added support for Web Notifications on debugger paused. (Marco Minetti)
+
+ * Dropped /debug in favor of root URL. (Marco Minetti)
+
+
+>>>>>>> 49c0b3f... 0.11.0
 ## 2015-05-13, Version 0.10.1
 
  * Bump dependencies (3y3)
@@ -805,3 +868,10 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 49c0b3f... 0.11.0

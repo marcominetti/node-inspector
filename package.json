@@ -1,6 +1,6 @@
 {
   "name": "ljve-inspector",
-  "version": "0.10.2",
+  "version": "0.11.0",
   "description": "Web Inspector based nodeJS debugger with extra/backported features",
   "homepage": "http://github.com/marcominetti/node-inspector",
   "keywords": [
