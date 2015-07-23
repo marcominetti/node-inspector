@@ -1,3 +1,10 @@
+## 2015-07-23, Version 0.11.2
+
+ * TravisCI: switch to container based infrastructure (3y3)
+
+ * Fix #698 (3y3)
+
+
 ## 2015-06-30, Version 0.11.1
 
  * Handle `compileError` as `afterCompile` on node 0.12 (3y3)
@@ -885,4 +892,9 @@
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> df57cd8... 0.11.1
+=======
+
+
+>>>>>>> 107cd83... 0.11.2
