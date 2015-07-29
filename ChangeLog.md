@@ -1,3 +1,10 @@
+## 2015-07-29, Version 0.12.1
+
+ * Exclude `tools` from .npmignore (Chris Baldwin)
+
+ * Update release.sh (3y3)
+
+
 ## 2015-07-29, Version 0.12.0
 
  * JSON endpoints /json and /json/list should return a JSON array (Alain Kalker)
@@ -943,4 +950,9 @@
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 0c6100e... 0.12.0
+=======
+
+
+>>>>>>> 6983a2d... 0.12.1
