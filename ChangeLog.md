@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ## 2015-06-29, Version 0.11.0
 
  * Update README.md (3y3)
@@ -60,7 +58,6 @@
  * Dropped /debug in favor of root URL. (Marco Minetti)
 
 
->>>>>>> 49c0b3f... 0.11.0
 ## 2015-05-13, Version 0.10.1
 
  * Bump dependencies (3y3)
