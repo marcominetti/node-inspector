@@ -61,6 +61,7 @@ WebInspector.SourcesOverrides.prototype = {
   
   _disableAddFolderItem: function(){
     WebInspector.NavigatorView.prototype._appendAddFolderItem = function(){};
+  },
 
   _overrideShortcutsRegistering: function() {
     // TODO(3y3): Check this before next front-end update.

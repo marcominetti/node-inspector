@@ -5,6 +5,8 @@
   { "name": "node/settings", "type": "autostart" },
   { "name": "node/sources", "type": "autostart" },
   { "name": "node/console", "type": "autostart" },
+  { "name": "node/components", "type": "autostart" },
+  { "name": "node/ui", "type": "autostart" },
   { "name": "node/main", "type": "autostart" },
   { "name": "audits", "type": "exclude"},
   { "name": "elements", "type": "exclude"},
